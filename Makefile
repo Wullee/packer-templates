@@ -33,7 +33,7 @@ TRAVIS_PACKER_BUILD ?= travis-packer-build
 UNZIP ?= unzip
 
 %: %.yml $(META_FILES)
-	$(PACKER) build -only=$(BUILDER) <(bin/yml2json < $<)
+	bin/yml2json <$< | $(PACKER) build -only=$(BUILDER) -
 
 .PHONY: all
 all: $(META_FILES) $(PHP_PACKAGES_FILE) $(SYSTEM_INFO_COMMANDS_FILES)

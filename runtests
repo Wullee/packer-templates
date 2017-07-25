@@ -27,7 +27,7 @@ for f in $(git ls-files '*.yml'); do
     ruby -ryaml -rerb \
       -e "YAML.load(ERB.new(File.read('${f}')).result).fetch('description')"
     echo -en "(packer validate ...) "
-    packer validate <(bin/yml2json <"$f")
+    bin/yml2json <"$f" | packer validate -
     echo "\`--> ✓"
   else
     echo "✓"

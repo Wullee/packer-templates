@@ -20,7 +20,7 @@ make ci-connie BUILDER=docker
 or forget about the `Makefile` and run with `packer` directly:
 
 ``` bash
-packer build -only=docker <(bin/yml2json < ci-connie.yml)
+bin/yml2json <ci-connie.yml | packer build -only=docker -
 ```
 
 ## env config bits
