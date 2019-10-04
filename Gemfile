@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'chef-dk' # yes, it is unofficial oh noes
-gem 'foodcritic'
+gem 'foodcritic', '>= 11.2.0'
 gem 'pry'
 gem 'rspec'
 gem 'rubocop'
