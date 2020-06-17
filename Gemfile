@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'chef-dk' # yes, it is unofficial oh noes
+gem 'chef-dk' , '>= 1.4.3' # yes, it is unofficial oh noes
 gem 'foodcritic'
 gem 'pry'
 gem 'rspec'
