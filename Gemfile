@@ -2,8 +2,8 @@
 
 source 'https://rubygems.org'
 
-gem 'chef-dk' # yes, it is unofficial oh noes
-gem 'foodcritic'
+gem 'chef-dk' , '>= 1.5.0' # yes, it is unofficial oh noes
+gem 'foodcritic', '>= 11.3.0'
 gem 'pry'
 gem 'rspec'
 gem 'rubocop'
